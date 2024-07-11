@@ -34,9 +34,9 @@ header {
     left: 0;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px 20px;
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     animation: slideDown 0.5s ease-in-out;
@@ -120,7 +120,7 @@ h1 {
 
 .project:hover h3,
 .project:hover p {
-    color: #ffeb3b;
+    color: #011f4b;
 }
 
 .icons {
@@ -293,10 +293,13 @@ h1 {
 
     header {
         padding: 20px;
+        justify-content: space-between;
     }
 
     .top-nav ul {
-        flex-direction: column;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
         position: fixed;
         top: 0;
         left: 0;
@@ -304,7 +307,7 @@ h1 {
         background-color: rgba(0, 0, 0, 0.9);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         z-index: 1000;
-        display: none;
+        padding: 10px;
     }
 
     .top-nav ul.show {
@@ -312,7 +315,17 @@ h1 {
     }
 
     .top-nav li {
-        margin: 15px 0;
+        margin: 0 10px;
+    }
+
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icons {
+        flex-wrap: nowrap;
+        overflow-x: auto;
     }
 
     .menu-icon {
