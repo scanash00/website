@@ -52,9 +52,9 @@ header {
 }
 
 h1 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     animation: zoomIn 0.5s ease-in-out;
@@ -84,12 +84,12 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
 }
 
 .project {
-    max-width: 600px;
+    max-width: 100%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -106,14 +106,14 @@ h1 {
 }
 
 .project h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: #ffffff;
     transition: color 0.3s;
 }
 
 .project p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #e0e0e0;
     transition: color 0.3s;
 }
@@ -127,7 +127,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -148,8 +148,8 @@ h1 {
 }
 
 .icon img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
 }
 
@@ -163,7 +163,7 @@ h1 {
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s, transform 0.3s;
@@ -176,7 +176,7 @@ h1 {
 
 .footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     background: transparent;
     width: 100%;
     color: #b0b0b0;
@@ -195,13 +195,13 @@ h1 {
 }
 
 .footer p {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .status-dot {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     margin-right: 5px;
 }
@@ -212,13 +212,13 @@ h1 {
     align-items: center;
     margin-bottom: 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     animation: fadeIn 1s ease-in-out;
 }
 
 .profile-photo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     overflow: hidden;
     border-radius: 50%;
     margin-bottom: 10px;
@@ -238,12 +238,12 @@ h1 {
 
 .profile-name {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .profile-typed {
     margin-top: 15px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #fff;
     overflow: hidden;
     width: 100%;
@@ -261,13 +261,13 @@ h1 {
 }
 
 .top-nav li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .top-nav a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
@@ -292,12 +292,11 @@ h1 {
     }
 
     header {
-        padding: 20px 20px;
+        padding: 20px;
     }
 
     .top-nav ul {
-        flex-direction: row;
-        display: flex;
+        flex-direction: column;
         position: fixed;
         top: 0;
         left: 0;
@@ -305,6 +304,7 @@ h1 {
         background-color: rgba(0, 0, 0, 0.9);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         z-index: 1000;
+        display: none;
     }
 
     .top-nav ul.show {
@@ -312,11 +312,7 @@ h1 {
     }
 
     .top-nav li {
-        margin: 0 15px;
-    }
-
-    .icon:hover {
-        transform: translateY(-5px); 
+        margin: 15px 0;
     }
 
     .menu-icon {
