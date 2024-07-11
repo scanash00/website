@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Scan's Website</title>
+    <meta name="description" content="Frequently Asked Questions (no one asked)">
+    <meta property="og:title" content="FAQ - Scan's Website">
+    <meta property="og:description" content="Find answers to questions no one asked lol">
+    <meta property="og:url" content="https://socials.scanash.com/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Scan's Website">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Ml5xN+M9V5CvegPq2QHw6m6bH5q6skRG/WG4F08eEzRXgfeDn1+I/KWp8exlO5r+89L+DEm2X6OxpfYNj9aJKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .faq-section {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 100%;
+            margin: 100px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .faq-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .faq-item {
+            margin-bottom: 30px;
+        }
+
+        .faq-item h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ffeb3b;
+        }
+
+        .faq-item p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 20px;
+                margin: 80px auto;
+            }
+
+            .faq-section h1 {
+                font-size: 2rem;
+            }
+
+            .faq-item h2 {
+                font-size: 1.5rem;
+            }
+
+            .faq-item p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+</header>
+
+<main class="main-content">
+    <section class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <h2>What does "not shared" mean?</h2>
+            <p>It could be multiple things! For example: I am unemployed, I got scammed, privacy, or I just don’t want to share anything!</p>
+        </div>
+        <div class="faq-item">
+            <h2>Is there any light mode?</h2>
+            <p>In this website, there is no light mode, i don’t want people to suffer from eye pain, i want them to enjoy my website, so instead, you get a gray/dark theme!</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>Scan's Website © 2024 by Scan is licensed under CC BY-NC-SA 4.0</p>
+</footer>
+
+<script>
+    document.querySelector('.menu-icon').addEventListener('click', function() {
+        document.querySelector('.top-nav ul').classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
