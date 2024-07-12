@@ -241,6 +241,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
 
 .top-nav li {
@@ -284,10 +287,10 @@ h1 {
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        background-color: transparent; 
+        box-shadow: none; 
         z-index: 1000;
-        padding: 10px;
+        padding: 0; 
     }
 
     .top-nav ul.show {
