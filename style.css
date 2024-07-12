@@ -251,11 +251,12 @@ h1 {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s; 
 }
 
 .top-nav a:hover {
-    color: #ffeb3b;
+    color: #00ffff; 
+    transform: scale(1.1); 
 }
 
 .top-nav li:hover {
