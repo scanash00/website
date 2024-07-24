@@ -90,6 +90,11 @@ h1 {
     text-decoration: none;
     color: inherit;
     display: block;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #ffffff;
 }
 
 .project {
@@ -123,7 +128,7 @@ h1 {
 
 .project:hover h3,
 .project:hover p {
-    color: #00ffff;
+    color: #ffffff;
 }
 
 .icons {
@@ -262,7 +267,7 @@ h1 {
 }
 
 .top-nav a:hover {
-    color: #00ffff;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
