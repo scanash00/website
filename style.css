@@ -86,6 +86,12 @@ h1 {
     width: 100%;
 }
 
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .project {
     max-width: 600px;
     text-align: center;
@@ -300,4 +306,3 @@ h1 {
         flex-wrap: wrap;
     }
 }
-  
