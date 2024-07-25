@@ -414,11 +414,13 @@ h1 {
     }
 
     .icons {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .icon {
-        margin: 5px 0;
+        margin: 10px;
     }
 
     .icon img {
