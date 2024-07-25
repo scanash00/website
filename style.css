@@ -369,7 +369,7 @@ h1 {
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background: linear-gradient(to right, #000, #333); /* Gradient background */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         z-index: 1000;
         padding: 10px;
