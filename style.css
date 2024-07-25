@@ -275,20 +275,27 @@ h1 {
 }
 
 .bio-button button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 16px;
-    background-color: #4CAF50; 
-    color: white;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .bio-button button:hover {
-    background-color: #45a049; 
+    background: linear-gradient(135deg, #45a049, #1B5E20);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
 }
 
+.bio-button button:active {
+    transform: translateY(0);
+}
 
 @media (max-width: 768px) {
     body {
