@@ -353,12 +353,11 @@ h1 {
 
 @media (max-width: 768px) {
     body {
-        padding: 10px 0;
+        padding: 0;
     }
 
     header {
-        padding: 20px;
-        justify-content: space-between;
+        padding: 10px;
     }
 
     .top-nav ul {
@@ -373,6 +372,7 @@ h1 {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         z-index: 1000;
         padding: 10px;
+        margin: 0;
     }
 
     .top-nav ul.show {
@@ -388,6 +388,7 @@ h1 {
         color: #ffffff;
         text-decoration: none;
         font-size: 1rem;
+        padding: 10px;
         transition: color 0.3s;
     }
 
@@ -395,14 +396,53 @@ h1 {
         color: #ff9800;
     }
 
+    .main-content {
+        margin-top: 70px;
+        padding: 0 10px;
+    }
+
+    .project-section {
+        margin-top: 20px;
+    }
+
+    .project {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    .project p {
+        font-size: 1rem;
+    }
+
+    .icons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .icon {
+        margin: 10px;
+    }
+
     .icon img {
         width: 50px;
         height: 50px;
     }
 
-    .icons {
-        flex-wrap: wrap;
+    .bio-button button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .profile-section {
+        max-width: 90%;
     }
 }
+
 
 
