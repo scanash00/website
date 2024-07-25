@@ -279,21 +279,70 @@ h1 {
 }
 
 .bio-button button {
-    padding: 12px 25px;
+    padding: 12px 30px;
     font-size: 16px;
-    background: linear-gradient(135deg, #ff9800, #ff5722); 
+    background: linear-gradient(135deg, #ff9800, #ff5722);
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bio-button button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.4), transparent);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+}
+
+.bio-button button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .bio-button button:hover {
-    background: linear-gradient(135deg, #ff5722, #e64a19); 
+    background: linear-gradient(135deg, #ff5722, #e64a19);
     transform: scale(1.05);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.bio-button button span {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bio-button button .icon {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bio-button button {
+    animation: pulse 2s infinite;
 }
 
 
