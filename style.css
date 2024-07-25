@@ -1,340 +1,162 @@
-* {
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: #1a1a1a;
-    font-family: "Poppins", sans-serif;
-    color: #ffffff;
-    padding: 20px 0;
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    min-height: 100vh;
 }
 
 header {
     width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    animation: slideDown 0.5s ease-in-out;
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-h1 {
-    margin-bottom: 40px;
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: zoomIn 0.5s ease-in-out;
-    color: #ffeb3b;
+.top-nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
 }
 
-@keyframes zoomIn {
-    from {
-        transform: scale(0.5);
-    }
-    to {
-        transform: scale(1);
-    }
+.top-nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #ffeb3b;
+    transition: width 0.3s ease;
+}
+
+.top-nav a:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: #ffeb3b;
 }
 
 .main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
-    width: 100%;
-    padding: 0 20px;
-}
-
-.project-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-    width: 100%;
-}
-
-.project-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: color 0.3s;
-}
-
-.project-link:hover {
-    color: #ffffff;
-}
-
-.project {
-    max-width: 600px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
     width: 100%;
-    transition: transform 0.3s, background-color 0.3s;
 }
 
-.project:hover {
-    transform: translateY(-10px);
-    background-color: rgba(0, 0, 0, 0.7);
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
 }
 
-.project h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #ffffff;
-    transition: color 0.3s;
+.profile-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ffeb3b;
+    transition: transform 0.3s, border 0.3s;
 }
 
-.project p {
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    transition: color 0.3s;
+.profile-photo img:hover {
+    transform: scale(1.1);
+    border-color: #ffffff;
 }
 
-.project:hover h3,
-.project:hover p {
-    color: #ffffff;
+.profile-name {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.icon {
-    margin: 10px;
-    transition: transform 0.3s;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.icon:hover {
-    transform: translateY(-5px);
+    margin-top: 30px;
+    gap: 20px;
 }
 
 .icon img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s, filter 0.3s;
 }
 
-.icon::after {
-    content: attr(data-label);
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s;
+.icon:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
-.icon:hover::after {
-    opacity: 1;
-    bottom: -30px;
-}
-
-.footer {
-    text-align: center;
-    padding: 20px 0;
-    background: transparent;
-    width: 100%;
-    color: #b0b0b0;
-}
-
-.footer p {
-    font-size: 14px;
-}
-
-.status-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
-.profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 400px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.profile-photo {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.profile-photo img {
-    width: 100%;
-    height: auto;
-}
-
-.profile-photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
-}
-
-.profile-name {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.profile-typed {
-    margin-top: 15px;
-    font-size: 1.1rem;
-    color: #fff;
-    overflow: hidden;
-    width: 100%;
-    text-align: center;
-    word-wrap: break-word;
-}
-
-.top-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.top-nav li {
-    margin: 0 15px;
-}
-
-.top-nav a {
-    display: inline-block; 
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.top-nav a:hover {
-    color: #ffffff;
-}
 .bio-button {
-    text-align: center;
     margin-top: 20px;
 }
 
 .bio-button button {
-    padding: 12px 25px;
+    padding: 10px 25px;
     font-size: 16px;
-    font-weight: bold;
     color: #fff;
     background: linear-gradient(135deg, #4CAF50, #2E7D32);
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .bio-button button:hover {
     background: linear-gradient(135deg, #45a049, #1B5E20);
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
     transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.bio-button button:active {
-    transform: translateY(0);
+.footer {
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: #b0b0b0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 10px 0;
-    }
-
-    header {
-        padding: 20px;
-        justify-content: space-between;
-    }
-
     .top-nav ul {
-        flex-direction: row;
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.95);
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-        padding: 10px;
-    }
-
-    .top-nav ul.show {
-        display: flex;
-    }
-
-    .top-nav li {
-        margin: 0 10px;
-    }
-
-    .icon img {
-        width: 50px;
-        height: 50px;
+        padding: 10px 0;
     }
 
     .icons {
         flex-wrap: wrap;
+        gap: 10px;
     }
 }
