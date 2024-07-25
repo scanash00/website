@@ -273,26 +273,29 @@ h1 {
 .top-nav a:hover {
     color: #ff9800;
 }
-
 .bio-button {
     text-align: center;
     margin-top: 20px;
 }
 
 .bio-button button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 16px;
-    background-color: #4CAF50; 
+    background: linear-gradient(135deg, #ff9800, #ff5722); 
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .bio-button button:hover {
-    background-color: #45a049; 
+    background: linear-gradient(135deg, #ff5722, #e64a19); 
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
+
 
 @media (max-width: 768px) {
     body {
