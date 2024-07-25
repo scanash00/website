@@ -353,42 +353,26 @@ h1 {
 
 @media (max-width: 768px) {
     body {
-        padding: 0;
+        padding: 10px 0;
     }
 
     header {
-        padding: 10px;
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .top-nav ul {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background: linear-gradient(to right, #000, #333);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .top-nav {
-        display: block;
-        width: 100%;
-    }
-
-    .top-nav ul {
-        display: flex;
-        flex-direction: column;
         background-color: rgba(0, 0, 0, 0.9);
-        position: fixed;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: none;
+        z-index: 1000;
+        padding: 10px;
     }
 
     .top-nav ul.show {
@@ -396,16 +380,14 @@ h1 {
     }
 
     .top-nav li {
-        margin: 10px 0;
-        text-align: center;
+        margin: 0 10px;
     }
 
     .top-nav a {
+        display: inline-block;
         color: #ffffff;
         text-decoration: none;
         font-size: 1rem;
-        display: block;
-        padding: 10px;
         transition: color 0.3s;
     }
 
@@ -413,50 +395,14 @@ h1 {
         color: #ff9800;
     }
 
-    .main-content {
-        margin-top: 70px;
-        padding: 0 10px;
-    }
-
-    .project-section {
-        margin-top: 20px;
-    }
-
-    .project {
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-
-    .project h3 {
-        font-size: 1.5rem;
-    }
-
-    .project p {
-        font-size: 1rem;
-    }
-
-    .icons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .icon {
-        margin: 10px;
-    }
-
     .icon img {
         width: 50px;
         height: 50px;
     }
 
-    .bio-button button {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .profile-section {
-        max-width: 90%;
+    .icons {
+        flex-wrap: wrap;
     }
 }
+
 
