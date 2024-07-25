@@ -357,7 +357,7 @@ h1 {
     }
 
     header {
-        padding: 20px;
+        padding: 10px;
         background: linear-gradient(to right, #000, #333);
     }
 
@@ -369,10 +369,10 @@ h1 {
         top: 0;
         left: 0;
         width: 100%;
-        background: linear-gradient(to right, #000, #333); 
+        background: linear-gradient(to right, #000, #333);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         z-index: 1000;
-        padding: 10px;
+        padding: 5px;
         margin: 0;
     }
 
@@ -381,15 +381,16 @@ h1 {
     }
 
     .top-nav li {
-        margin: 0 15px;
+        margin: 0 10px;
     }
 
     .top-nav a {
         display: inline-block;
         color: #ffffff;
         text-decoration: none;
-        font-size: 1.2rem;
-        padding: 10px;
+        font-size: 0.9rem;
+        padding: 8px;
+        text-align: center;
         transition: color 0.3s;
     }
 
@@ -398,7 +399,7 @@ h1 {
     }
 
     .main-content {
-        margin-top: 70px;
+        margin-top: 60px;
         padding: 0 10px;
     }
 
@@ -444,6 +445,3 @@ h1 {
         max-width: 90%;
     }
 }
-
-
-
