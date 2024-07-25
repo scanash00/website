@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +14,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(135deg, #1a1a1a, #333);
+    background-color: #1a1a1a;
     font-family: "Poppins", sans-serif;
-    color: #f5f5f5;
+    color: #ffffff;
     padding: 20px 0;
     animation: fadeIn 1s ease-in-out;
 }
@@ -32,12 +36,12 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    background: linear-gradient(to right, #000, #333);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     animation: slideDown 0.5s ease-in-out;
 }
 
@@ -57,7 +61,7 @@ h1 {
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     animation: zoomIn 0.5s ease-in-out;
-    color: #ff9800;
+    color: #ffeb3b;
 }
 
 @keyframes zoomIn {
@@ -86,39 +90,48 @@ h1 {
     width: 100%;
 }
 
-.project-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: color 0.3s;
-}
-
-.project-link:hover {
-    color: #ffffff;
-}
-
 .project {
     max-width: 600px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     width: 100%;
     transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    background-clip: padding-box;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    z-index: -1;
+    transition: background 0.3s ease;
+}
+
+.project:hover::before {
+    background: linear-gradient(to right, #ff5722, #e64a19);
 }
 
 .project:hover {
     transform: translateY(-10px);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .project h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #ff9800;
+    color: #ffffff;
     transition: color 0.3s;
 }
 
@@ -144,16 +157,21 @@ h1 {
 
 .icon {
     margin: 10px;
-    transition: transform 0.3s;
+    transition: background 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    background-clip: padding-box;
 }
 
 .icon:hover {
-    transform: translateY(-5px);
+    background: linear-gradient(to right, #ff5722, #e64a19);
+    transform: scale(1.05);
 }
 
 .icon img {
@@ -220,8 +238,6 @@ h1 {
     border-radius: 50%;
     margin-bottom: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    border: 3px solid #ff9800;
-    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
 }
 
 .profile-photo img {
@@ -231,7 +247,7 @@ h1 {
 
 .profile-photo:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
 }
 
 .profile-name {
@@ -263,7 +279,7 @@ h1 {
 }
 
 .top-nav a {
-    display: inline-block;
+    display: inline-block; 
     color: #ffffff;
     text-decoration: none;
     font-size: 1.2rem;
@@ -271,8 +287,9 @@ h1 {
 }
 
 .top-nav a:hover {
-    color: #ff9800;
+    color: #ffffff;
 }
+
 .bio-button {
     text-align: center;
     margin-top: 20px;
@@ -290,31 +307,27 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
 }
 
 .bio-button button::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.4), transparent);
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s ease;
-    opacity: 0.7;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    z-index: -1;
+    transition: background 0.3s ease;
 }
 
 .bio-button button:hover::before {
-    transform: translate(-50%, -50%) scale(1);
+    background: linear-gradient(135deg, #ff5722, #e64a19);
 }
 
 .bio-button button:hover {
-    background: linear-gradient(135deg, #ff5722, #e64a19);
     transform: scale(1.05);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
@@ -336,15 +349,10 @@ h1 {
     50% {
         transform: scale(1.05);
     }
-    100% {
+     100% {
         transform: scale(1);
     }
 }
-
-.bio-button button {
-    animation: pulse 2s infinite;
-}
-
 
 @media (max-width: 768px) {
     body {
