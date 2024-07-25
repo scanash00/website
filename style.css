@@ -353,7 +353,7 @@ h1 {
 
 @media (max-width: 768px) {
     body {
-        padding: 10px 0;
+        padding: 0;
     }
 
     header {
@@ -365,10 +365,18 @@ h1 {
         background: linear-gradient(to right, #000, #333);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-nav {
+        display: block;
+        width: 100%;
     }
 
     .top-nav ul {
-        display: none;
+        display: flex;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.9);
         position: fixed;
@@ -377,6 +385,10 @@ h1 {
         width: 100%;
         padding: 10px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
     }
 
     .top-nav ul.show {
@@ -385,10 +397,20 @@ h1 {
 
     .top-nav li {
         margin: 10px 0;
+        text-align: center;
     }
 
     .top-nav a {
+        color: #ffffff;
+        text-decoration: none;
         font-size: 1rem;
+        display: block;
+        padding: 10px;
+        transition: color 0.3s;
+    }
+
+    .top-nav a:hover {
+        color: #ff9800;
     }
 
     .main-content {
@@ -437,3 +459,4 @@ h1 {
         max-width: 90%;
     }
 }
+
