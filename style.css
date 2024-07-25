@@ -357,22 +357,26 @@ h1 {
     }
 
     header {
-        padding: 20px;
-        justify-content: space-between;
-    }
-
-    .top-nav ul {
-        flex-direction: row;
-        display: flex;
-        justify-content: center;
+        padding: 10px;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(to right, #000, #333);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         z-index: 1000;
-        padding: 10px;
+    }
+
+    .top-nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     .top-nav ul.show {
@@ -380,7 +384,41 @@ h1 {
     }
 
     .top-nav li {
-        margin: 0 10px;
+        margin: 10px 0;
+    }
+
+    .top-nav a {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        margin-top: 70px;
+        padding: 0 10px;
+    }
+
+    .project-section {
+        margin-top: 20px;
+    }
+
+    .project {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    .project p {
+        font-size: 1rem;
+    }
+
+    .icons {
+        flex-direction: column;
+    }
+
+    .icon {
+        margin: 5px 0;
     }
 
     .icon img {
@@ -388,7 +426,12 @@ h1 {
         height: 50px;
     }
 
-    .icons {
-        flex-wrap: wrap;
+    .bio-button button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .profile-section {
+        max-width: 90%;
     }
 }
