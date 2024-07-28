@@ -1,6 +1,6 @@
 body {
     font-family: "Poppins", sans-serif;
-    background: #d3d3d3;
+    background: #e0e0e0; 
     color: #000000;
     transition: background-color 0.3s, color 0.3s, font-family 0.3s;
 }
@@ -39,16 +39,6 @@ body {
     font-size: 20px;
 }
 
-.dark-mode {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-    color: #f5f5f5;
-}
-
-.light-mode {
-    background-color: #e0e0e0; 
-    color: #000000; /* Ensure text color is black */
-}
-
 .icon-container {
     display: flex;
     justify-content: center;
@@ -58,26 +48,28 @@ body {
     background-color: transparent;
 }
 
-.dark-mode .icon-container {
-    background-color: transparent;
-}
-
-.light-mode .icon-container {
-    background-color: transparent;
-}
-
 .icon img {
     filter: invert(0);
     transition: filter 0.3s;
 }
 
-.dark-mode .icon img {
-    filter: invert(1);
-}
-
 .icon.throne img {
     filter: invert(1);
     transition: filter 0.3s;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #f5f5f5;
+}
+
+body.light-mode {
+    background-color: #e0e0e0;
+    color: #000000;
+}
+
+.dark-mode .icon img {
+    filter: invert(1);
 }
 
 .dark-mode .icon.throne img {
