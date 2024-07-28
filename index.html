@@ -57,24 +57,21 @@
         .icon-container {
             display: flex;
             justify-content: center;
-            padding: 5px;
-            background-color: #2f2f2f;
+            padding: 10px;
+            background-color: #f0f0f0;
             border-radius: 10px;
             margin: 10px;
         }
         .icon {
-            padding: 5px;
+            padding: 10px;
         }
         .icon img {
             transition: all 0.3s;
-            border-radius: 0;
+            border-radius: 5px;
             background-color: transparent;
         }
         .light-mode .icon-container {
-            background-color: #2f2f2f;
-            border-radius: 10px;
-            padding: 5px;
-            margin: 10px;
+            background-color: #f0f0f0;
         }
         @media (max-width: 600px) {
             .toggle-wrapper {
@@ -195,7 +192,7 @@
                 toggle.classList.remove('active');
                 body.style.backgroundColor = '#d3d3d3';
                 typedElement.style.color = '#000000';
-                iconContainer.style.backgroundColor = '#2f2f2f';
+                iconContainer.style.backgroundColor = '#f0f0f0';
             }
             localStorage.setItem('theme', theme);
         }
