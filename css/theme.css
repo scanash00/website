@@ -94,7 +94,7 @@ body {
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
-    transition: color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .dark-mode .project {
@@ -105,6 +105,11 @@ body {
 .light-mode .project {
     background-color: #fff;
     color: #000;
+}
+
+
+.typed {
+    color: inherit;
 }
 
 @media (max-width: 600px) {
