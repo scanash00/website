@@ -19,7 +19,7 @@
         body {
             transition: background-color 0.3s, color 0.3s, font-family 0.3s;
             font-family: "Poppins", sans-serif;
-            background: #ffffff;
+            background: #f0f0f0;
             color: #000000;
         }
         .toggle-wrapper {
@@ -53,17 +53,10 @@
             color: #f5f5f5;
         }
         .icon img {
-            border-radius: 50%;
-            background-color: #fff;
-            padding: 5px;
-        }
-        .dark-mode .icon img {
-            background-color: transparent;
+            filter: none;
         }
         .light-mode-icon {
-            border-radius: 50%;
-            background-color: #000;
-            padding: 5px;
+            filter: invert(100%);
         }
     </style>
 </head>
@@ -132,7 +125,7 @@
     <footer class="footer">
         <p>Scan's Website © 2024 by Scan is licensed under CC BY-NC-SA 4.0</p>
     </footer>
-        <img src="images/notbyai.png" alt='Not by AI'/>
+    <img src="images/notbyai.png" alt='Not by AI'/>
     <script src="js/script.js"></script>
     <script src="js/typed.js"></script>
     <script>
@@ -150,18 +143,23 @@
             const body = document.body;
             const toggle = document.querySelector('.toggle-wrapper');
             const typedElement = document.getElementById('typed');
-            const icons = document.querySelectorAll('.light-mode-icon');
+            const icons = document.querySelectorAll('.icon img');
 
             if (theme === 'dark') {
                 body.classList.add('dark-mode');
                 toggle.classList.add('active');
                 typedElement.style.color = '#f5f5f5';
-                icons.forEach(icon => icon.classList.remove('light-mode-icon'));
+                icons.forEach(icon => {
+                    icon.classList.remove('light-mode-icon');
+                });
             } else {
                 body.classList.remove('dark-mode');
                 toggle.classList.remove('active');
+                body.style.backgroundColor = '#f0f0f0';
                 typedElement.style.color = '#000000';
-                icons.forEach(icon => icon.classList.add('light-mode-icon'));
+                icons.forEach(icon => {
+                    icon.classList.add('light-mode-icon');
+                });
             }
             localStorage.setItem('theme', theme);
         }
