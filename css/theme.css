@@ -45,12 +45,7 @@ body {
 }
 
 .light-mode {
-    background-color: #e0e0e0; 
-    color: #333333;
-}
-
-.projects-page.light-mode {
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0;
     color: #000000;
 }
 
