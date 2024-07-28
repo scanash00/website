@@ -18,7 +18,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000; 
+    z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -45,21 +45,8 @@ body {
 }
 
 .light-mode {
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0;
     color: #333333;
-}
-
-#typed {
-    transition: color 0.3s;
-}
-
-.dark-mode #typed {
-    color: #f5f5f5; 
-    
-}
-
-.light-mode #typed {
-    color: #333333; 
 }
 
 .icon-container {
@@ -95,6 +82,29 @@ body {
 
 .dark-mode .icon.throne img {
     filter: invert(0);
+}
+
+.project-section {
+    padding: 20px;
+}
+
+.project {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.dark-mode .project {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.light-mode .project {
+    background-color: #fff;
+    color: #000;
 }
 
 @media (max-width: 600px) {
