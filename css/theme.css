@@ -102,3 +102,12 @@ body.light-mode {
         padding: 5px;
     }
 }
+
+
+body.light-mode .typed {
+    color: #000000;
+}
+
+body.dark-mode .typed {
+    color: #f5f5f5;
+}
