@@ -14,9 +14,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(135deg, #1a1a1a, #333);
+    background: var(--background-color);
     font-family: "Poppins", sans-serif;
-    color: #f5f5f5;
+    color: var(--text-color);
     padding: 20px 0;
     animation: fadeIn 1s ease-in-out;
 }
@@ -36,7 +36,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    background: linear-gradient(to right, #000, #333);
+    background: var(--topbar-background);
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -154,16 +154,19 @@ h1 {
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-.icon:hover {
-    transform: translateY(-5px);
+    background-color: var(--icon-background);
+    border-radius: 50%;
+    padding: 10px;
 }
 
 .icon img {
     width: 60px;
     height: 60px;
     object-fit: contain;
+}
+
+.icon:hover {
+    transform: translateY(-5px);
 }
 
 .icon::after {
@@ -246,7 +249,7 @@ h1 {
 .profile-typed {
     margin-top: 15px;
     font-size: 1.1rem;
-    color: #fff;
+    color: var(--typed-text-color);
     overflow: hidden;
     width: 100%;
     text-align: center;
@@ -268,7 +271,7 @@ h1 {
 
 .top-nav a {
     display: inline-block;
-    color: #ffffff;
+    color: var(--nav-text-color);
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s;
@@ -444,4 +447,23 @@ h1 {
     .profile-section {
         max-width: 90%;
     }
+}
+
+
+:root {
+    --background-color: #1a1a1a;
+    --text-color: #f5f5f5;
+    --topbar-background: linear-gradient(to right, #000, #333);
+    --icon-background: rgba(255, 255, 255, 0);
+    --nav-text-color: #ffffff;
+    --typed-text-color: #ffffff;
+}
+
+body.light-mode {
+    --background-color: #e0e0e0;
+    --text-color: #000000;
+    --topbar-background: #c4c4c4;
+    --icon-background: #000000;
+    --nav-text-color: #000000;
+    --typed-text-color: #000000;
 }
