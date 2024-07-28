@@ -19,8 +19,8 @@
         body {
             transition: background-color 0.3s, color 0.3s, font-family 0.3s;
             font-family: "Poppins", sans-serif;
-            background: #ffffff; 
-            color: #000000; 
+            background: #ffffff;
+            color: #000000;
         }
         .toggle-wrapper {
             position: relative;
@@ -49,8 +49,21 @@
             font-size: 18px;
         }
         .dark-mode {
-            background: linear-gradient(135deg, #1a1a1a, #333); 
-            color: #f5f5f5; 
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: #f5f5f5;
+        }
+        .icon img {
+            border-radius: 50%;
+            background-color: #fff;
+            padding: 5px;
+        }
+        .dark-mode .icon img {
+            background-color: transparent;
+        }
+        .light-mode-icon {
+            border-radius: 50%;
+            background-color: #000;
+            padding: 5px;
         }
     </style>
 </head>
@@ -64,7 +77,6 @@
                 <li><a href="https://ko-fi.com/scanash/">Ko-Fi</a></li>
             </ul>
         </nav>
-  
         <div class="toggle-wrapper" onclick="toggleTheme()">
             <div class="sun">☀️</div>
             <div class="moon">🌙</div>
@@ -92,22 +104,22 @@
         <div class="icons">
             <div class="icon discord" data-label="Discord">
                 <a href="https://discord.com/users/827389583342698536/" target="_blank" rel="noopener noreferrer">
-                    <img src="logos/discord_white.png" alt="Discord Logo" class="logo-image">
+                    <img src="logos/discord_white.png" alt="Discord Logo" class="logo-image light-mode-icon">
                 </a>
             </div>
             <div class="icon x" data-label="X">
                 <a href="https://x.com/x_ale_pro" target="_blank" rel="noopener noreferrer">
-                    <img src="logos/x_white.png" alt="X Logo" class="logo-image">
+                    <img src="logos/x_white.png" alt="X Logo" class="logo-image light-mode-icon">
                 </a>
             </div>
             <div class="icon throne" data-label="Wishlist">
                 <a href="https://throne.com/scanash" target="_blank" rel="noopener noreferrer">
-                    <img src="logos/throne_white.png" alt="Throne Logo" class="logo-image">
+                    <img src="logos/throne_white.png" alt="Throne Logo" class="logo-image light-mode-icon">
                 </a>
             </div>
             <div class="icon github" data-label="GitHub">
                 <a href="https://github.com/scanash00/" target="_blank" rel="noopener noreferrer">
-                    <img src="logos/github_white.png" alt="GitHub Logo" class="logo-image">
+                    <img src="logos/github_white.png" alt="GitHub Logo" class="logo-image light-mode-icon">
                 </a>
             </div>
         </div>
@@ -137,12 +149,19 @@
         function setTheme(theme) {
             const body = document.body;
             const toggle = document.querySelector('.toggle-wrapper');
+            const typedElement = document.getElementById('typed');
+            const icons = document.querySelectorAll('.light-mode-icon');
+
             if (theme === 'dark') {
                 body.classList.add('dark-mode');
                 toggle.classList.add('active');
+                typedElement.style.color = '#f5f5f5';
+                icons.forEach(icon => icon.classList.remove('light-mode-icon'));
             } else {
                 body.classList.remove('dark-mode');
                 toggle.classList.remove('active');
+                typedElement.style.color = '#000000';
+                icons.forEach(icon => icon.classList.add('light-mode-icon'));
             }
             localStorage.setItem('theme', theme);
         }
