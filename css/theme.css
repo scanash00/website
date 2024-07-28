@@ -49,16 +49,21 @@ body {
     color: #333333;
 }
 
+.projects-page.light-mode {
+    background-color: #e0e0e0; 
+    color: #000000;
+}
+
 #typed {
     transition: color 0.3s;
 }
 
 .dark-mode #typed {
-    color: #f5f5f5; /* Light text color for dark mode */
+    color: #f5f5f5;
 }
 
 .light-mode #typed {
-    color: #333333; /* Dark text color for light mode */
+    color: #333333;
 }
 
 .icon-container {
