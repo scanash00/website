@@ -63,8 +63,8 @@
         }
 
         .light-mode {
-            background-color: #e0e0e0; /* Changed to a darker shade */
-            color: #333333; /* Changed to a darker shade */
+            background-color: #e0e0e0; 
+            color: #333333;
         }
 
         .icon-container {
@@ -141,8 +141,8 @@
             </ul>
         </nav>
         <div class="toggle-wrapper" onclick="toggleTheme()">
-            <div class="sun">☀️</div>
             <div class="moon">🌙</div>
+            <div class="sun">☀️</div>
             <div class="toggle-circle"></div>
         </div>
     </header>
@@ -225,8 +225,8 @@
                 body.classList.remove('dark-mode');
                 body.classList.add('light-mode');
                 toggle.classList.remove('active');
-                body.style.backgroundColor = '#e0e0e0'; /* Changed to a darker shade */
-                typedElement.style.color = '#333333'; /* Changed to a darker shade */
+                body.style.backgroundColor = '#e0e0e0'; 
+                typedElement.style.color = '#333333'; 
                 iconContainer.style.backgroundColor = 'transparent';
             }
             localStorage.setItem('theme', theme);
