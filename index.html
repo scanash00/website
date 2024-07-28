@@ -6,7 +6,7 @@
     <title>Scan's Website</title>
     <meta name="description" content="Scan's Website">
     <meta property="og:title" content="Scan's Website">
-    <meta property="og:description" content="Here you will find Scan's Socials, faq, projects he worked on, etc.">
+    <meta property="og:description" content="Here you will find Scan's Socials, FAQ, projects he worked on, etc.">
     <meta property="og:url" content="https://scanash.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Scan's website.">
@@ -17,11 +17,12 @@
     <script src="js/typed.umd.js"></script>
     <style>
         body {
-            transition: background-color 0.3s, color 0.3s, font-family 0.3s;
             font-family: "Poppins", sans-serif;
             background: #d3d3d3;
             color: #000000;
+            transition: background-color 0.3s, color 0.3s, font-family 0.3s;
         }
+
         .toggle-wrapper {
             width: 60px;
             height: 30px;
@@ -36,6 +37,7 @@
             top: 10px;
             right: 10px;
         }
+
         .toggle-circle {
             position: absolute;
             width: 24px;
@@ -44,50 +46,72 @@
             border-radius: 50%;
             transition: transform 0.3s;
         }
+
         .toggle-wrapper.active .toggle-circle {
             transform: translateX(30px);
         }
+
         .sun, .moon {
             font-size: 18px;
         }
+
         .dark-mode {
             background: linear-gradient(135deg, #1a1a1a, #333);
             color: #f5f5f5;
         }
+
+        .light-mode {
+            background-color: #f9f9f9;
+            color: #000;
+        }
+
         .icon-container {
             display: flex;
             justify-content: center;
             padding: 10px;
-            background-color: #f0f0f0;
             border-radius: 10px;
             margin: 10px;
+            transition: background-color 0.3s;
         }
+
         .icon {
             padding: 10px;
+            position: relative;
         }
+
         .icon img {
             transition: all 0.3s;
             border-radius: 5px;
             background-color: transparent;
         }
-        .light-mode .icon-container {
-            background-color: #f0f0f0;
+
+        .dark-mode .icon-container {
+            background-color: #2f2f2f;
         }
+
+        .light-mode .icon-container {
+            background-color: #f2f2f2;
+        }
+
         @media (max-width: 600px) {
             .toggle-wrapper {
                 width: 50px;
                 height: 25px;
             }
+
             .toggle-circle {
                 width: 20px;
                 height: 20px;
             }
+
             .toggle-wrapper.active .toggle-circle {
                 transform: translateX(25px);
             }
+
             .sun, .moon {
                 font-size: 16px;
             }
+
             .icon-container {
                 margin: 10px;
                 padding: 5px;
@@ -192,7 +216,7 @@
                 toggle.classList.remove('active');
                 body.style.backgroundColor = '#d3d3d3';
                 typedElement.style.color = '#000000';
-                iconContainer.style.backgroundColor = '#f0f0f0';
+                iconContainer.style.backgroundColor = '#f2f2f2';
             }
             localStorage.setItem('theme', theme);
         }
