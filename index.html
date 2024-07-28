@@ -74,18 +74,8 @@
             background-color: transparent;
         }
 
-        .icon {
-            padding: 0; 
-        }
-
-        .icon img {
-            border-radius: 0; 
-            background-color: transparent; 
-            display: block;
-        }
-
         .dark-mode .icon-container {
-            background-color: transparent; 
+            background-color: transparent;
         }
 
         .light-mode .icon-container {
@@ -215,7 +205,7 @@
                 toggle.classList.remove('active');
                 body.style.backgroundColor = '#d3d3d3';
                 typedElement.style.color = '#000000';
-                iconContainer.style.backgroundColor = '#f2f2f2';
+                iconContainer.style.backgroundColor = 'transparent';
             }
             localStorage.setItem('theme', theme);
         }
