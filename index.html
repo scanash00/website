@@ -57,22 +57,24 @@
         .icon-container {
             display: flex;
             justify-content: center;
-            align-items: center;
             padding: 5px;
-            background-color: #b3b3b3;
-            border-radius: 50%;
+            background-color: #2f2f2f;
+            border-radius: 10px;
             margin: 10px;
-            width: 50px;
-            height: 50px;
+        }
+        .icon {
+            padding: 5px;
         }
         .icon img {
             transition: all 0.3s;
             border-radius: 0;
-            width: 40px;
-            height: 40px;
+            background-color: transparent;
         }
         .light-mode .icon-container {
-            background-color: #b3b3b3;
+            background-color: #2f2f2f;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 10px;
         }
         @media (max-width: 600px) {
             .toggle-wrapper {
@@ -91,8 +93,7 @@
             }
             .icon-container {
                 margin: 10px;
-                width: 45px;
-                height: 45px;
+                padding: 5px;
             }
         }
     </style>
@@ -180,25 +181,21 @@
             const body = document.body;
             const toggle = document.querySelector('.toggle-wrapper');
             const typedElement = document.getElementById('typed');
-            const iconContainers = document.querySelectorAll('.icon-container');
+            const iconContainer = document.querySelector('.icon-container');
 
             if (theme === 'dark') {
                 body.classList.add('dark-mode');
                 body.classList.remove('light-mode');
                 toggle.classList.add('active');
                 typedElement.style.color = '#f5f5f5';
-                iconContainers.forEach(container => {
-                    container.style.backgroundColor = 'transparent';
-                });
+                iconContainer.style.backgroundColor = 'transparent';
             } else {
                 body.classList.remove('dark-mode');
                 body.classList.add('light-mode');
                 toggle.classList.remove('active');
                 body.style.backgroundColor = '#d3d3d3';
                 typedElement.style.color = '#000000';
-                iconContainers.forEach(container => {
-                    container.style.backgroundColor = '#b3b3b3';
-                });
+                iconContainer.style.backgroundColor = '#2f2f2f';
             }
             localStorage.setItem('theme', theme);
         }
