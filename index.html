@@ -24,35 +24,37 @@
         }
 
         .toggle-wrapper {
-            width: 60px;
-            height: 30px;
+            width: 70px;
+            height: 35px;
             background-color: #444;
-            border-radius: 30px;
+            border-radius: 35px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 5px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .toggle-circle {
             position: absolute;
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
             background-color: #fff;
             border-radius: 50%;
             transition: transform 0.3s;
         }
 
         .toggle-wrapper.active .toggle-circle {
-            transform: translateX(30px);
+            transform: translateX(35px);
         }
 
         .sun, .moon {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .dark-mode {
@@ -61,8 +63,8 @@
         }
 
         .light-mode {
-            background-color: #f9f9f9;
-            color: #000;
+            background-color: #e0e0e0; /* Changed to a darker shade */
+            color: #333333; /* Changed to a darker shade */
         }
 
         .icon-container {
@@ -82,23 +84,43 @@
             background-color: transparent;
         }
 
+        .icon img {
+            filter: invert(0);
+            transition: filter 0.3s;
+        }
+
+        .dark-mode .icon img {
+            filter: invert(1);
+        }
+
+        .icon.throne img {
+            filter: invert(1);
+            transition: filter 0.3s;
+        }
+
+        .dark-mode .icon.throne img {
+            filter: invert(0);
+        }
+
         @media (max-width: 600px) {
             .toggle-wrapper {
-                width: 50px;
-                height: 25px;
+                width: 60px;
+                height: 30px;
+                bottom: 15px;
+                right: 15px;
             }
 
             .toggle-circle {
-                width: 20px;
-                height: 20px;
+                width: 24px;
+                height: 24px;
             }
 
             .toggle-wrapper.active .toggle-circle {
-                transform: translateX(25px);
+                transform: translateX(30px);
             }
 
             .sun, .moon {
-                font-size: 16px;
+                font-size: 18px;
             }
 
             .icon-container {
@@ -145,22 +167,22 @@
         <div class="icon-container">
             <div class="icon discord" data-label="Discord">
                 <a href="https://discord.com/users/827389583342698536/" target="_blank" rel="noopener noreferrer">
-                    <img src="logos/discord_white.png" alt="Discord Logo" class="logo-image">
+                    <img src="logos/discord.svg" alt="Discord Logo" class="logo-image">
                 </a>
             </div>
             <div class="icon x" data-label="X">
                 <a href="https://x.com/x_ale_pro" target="_blank" rel="noopener noreferrer">
-                    <img src="logos/x_white.png" alt="X Logo" class="logo-image">
+                    <img src="logos/x.svg" alt="X Logo" class="logo-image">
                 </a>
             </div>
             <div class="icon throne" data-label="Wishlist">
                 <a href="https://throne.com/scanash" target="_blank" rel="noopener noreferrer">
-                    <img src="logos/throne_white.png" alt="Throne Logo" class="logo-image">
+                    <img src="logos/throne.svg" alt="Throne Logo" class="logo-image">
                 </a>
             </div>
             <div class="icon github" data-label="GitHub">
                 <a href="https://github.com/scanash00/" target="_blank" rel="noopener noreferrer">
-                    <img src="logos/github_white.png" alt="GitHub Logo" class="logo-image">
+                    <img src="logos/github.svg" alt="GitHub Logo" class="logo-image">
                 </a>
             </div>
         </div>
@@ -203,8 +225,8 @@
                 body.classList.remove('dark-mode');
                 body.classList.add('light-mode');
                 toggle.classList.remove('active');
-                body.style.backgroundColor = '#d3d3d3';
-                typedElement.style.color = '#000000';
+                body.style.backgroundColor = '#e0e0e0'; /* Changed to a darker shade */
+                typedElement.style.color = '#333333'; /* Changed to a darker shade */
                 iconContainer.style.backgroundColor = 'transparent';
             }
             localStorage.setItem('theme', theme);
