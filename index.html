@@ -15,6 +15,42 @@
     <link rel="stylesheet" href="all.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="js/typed.umd.js"></script>
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s, font-family 0.3s;
+            font-family: "Poppins", sans-serif;
+        }
+        .toggle-wrapper {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background-color: #444;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            justify-content: space-between;
+        }
+        .toggle-circle {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .toggle-wrapper.active .toggle-circle {
+            transform: translateX(30px);
+        }
+        .sun, .moon {
+            font-size: 18px;
+        }
+        .dark-mode {
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: #f5f5f5;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,6 +62,11 @@
                 <li><a href="https://ko-fi.com/scanash/">Ko-Fi</a></li>
             </ul>
         </nav>
+        <div class="toggle-wrapper" onclick="toggleTheme()">
+            <div class="sun">☀️</div>
+            <div class="moon">🌙</div>
+            <div class="toggle-circle"></div>
+        </div>
     </header>
 
     <main class="main-content">
@@ -76,8 +117,37 @@
     <footer class="footer">
         <p>Scan's Website © 2024 by Scan is licensed under CC BY-NC-SA 4.0</p>
     </footer>
-        <img src="images/notbyai.png" alt='Not by AI'/></a>
+        <img src="images/notbyai.png" alt='Not by AI'/>
     <script src="js/script.js"></script>
     <script src="js/typed.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme);
+            } else {
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                setTheme(systemPrefersDark ? 'dark' : 'light');
+            }
+        });
+
+        function setTheme(theme) {
+            const body = document.body;
+            const toggle = document.querySelector('.toggle-wrapper');
+            if (theme === 'dark') {
+                body.classList.add('dark-mode');
+                toggle.classList.add('active');
+            } else {
+                body.classList.remove('dark-mode');
+                toggle.classList.remove('active');
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        function toggleTheme() {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            setTheme(isDarkMode ? 'dark' : 'light');
+        }
+    </script>
 </body>
 </html>
