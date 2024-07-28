@@ -107,9 +107,8 @@ body {
     color: #000;
 }
 
-
 .typed {
-    color: inherit;
+    color: inherit; /* Inherit color from parent elements */
 }
 
 @media (max-width: 600px) {
