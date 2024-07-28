@@ -1,113 +1,113 @@
 body {
-    font-family: "Poppins", sans-serif;
-    background: #e0e0e0; 
-    color: #000000;
-    transition: background-color 0.3s, color 0.3s, font-family 0.3s;
-}
+        font-family: "Poppins", sans-serif;
+        background: #d3d3d3;
+        color: #000000;
+        transition: background-color 0.3s, color 0.3s, font-family 0.3s;
+    }
 
-.toggle-wrapper {
-    width: 70px;
-    height: 35px;
-    background-color: #444;
-    border-radius: 35px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.toggle-circle {
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: transform 0.3s;
-}
-
-.toggle-wrapper.active .toggle-circle {
-    transform: translateX(35px);
-}
-
-.sun, .moon {
-    font-size: 20px;
-}
-
-.icon-container {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 10px;
-    background-color: transparent;
-}
-
-.icon img {
-    filter: invert(0);
-    transition: filter 0.3s;
-}
-
-.icon.throne img {
-    filter: invert(1);
-    transition: filter 0.3s;
-}
-
-body.dark-mode {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-    color: #f5f5f5;
-}
-
-body.light-mode {
-    background-color: #e0e0e0;
-    color: #000000;
-}
-
-.dark-mode .icon img {
-    filter: invert(1);
-}
-
-.dark-mode .icon.throne img {
-    filter: invert(0);
-}
-
-@media (max-width: 600px) {
     .toggle-wrapper {
-        width: 60px;
-        height: 30px;
-        bottom: 15px;
-        right: 15px;
+        width: 70px;
+        height: 35px;
+        background-color: #444;
+        border-radius: 35px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .toggle-circle {
-        width: 24px;
-        height: 24px;
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: transform 0.3s;
     }
 
     .toggle-wrapper.active .toggle-circle {
-        transform: translateX(30px);
+        transform: translateX(35px);
     }
 
     .sun, .moon {
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    .dark-mode {
+        background: linear-gradient(135deg, #1a1a1a, #333);
+        color: #f5f5f5;
+    }
+
+    .light-mode {
+        background-color: #e0e0e0; 
+        color: #333333;
     }
 
     .icon-container {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 10px;
         margin: 10px;
-        padding: 5px;
+        background-color: transparent;
     }
-}
 
+    .dark-mode .icon-container {
+        background-color: transparent;
+    }
 
-body.light-mode .typed {
-    color: #000000;
-}
+    .light-mode .icon-container {
+        background-color: transparent;
+    }
 
-body.dark-mode .typed {
-    color: #f5f5f5;
-}
+    .icon img {
+        filter: invert(0);
+        transition: filter 0.3s;
+    }
+
+    .dark-mode .icon img {
+        filter: invert(1);
+    }
+
+    .icon.throne img {
+        filter: invert(1);
+        transition: filter 0.3s;
+    }
+
+    .dark-mode .icon.throne img {
+        filter: invert(0);
+    }
+
+    @media (max-width: 600px) {
+        .toggle-wrapper {
+            width: 60px;
+            height: 30px;
+            bottom: 15px;
+            right: 15px;
+        }
+
+        .toggle-circle {
+            width: 24px;
+            height: 24px;
+        }
+
+        .toggle-wrapper.active .toggle-circle {
+            transform: translateX(30px);
+        }
+
+        .sun, .moon {
+            font-size: 18px;
+        }
+
+        .icon-container {
+            margin: 10px;
+            padding: 5px;
+        }
+    }
+</style>
