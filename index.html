@@ -19,7 +19,7 @@
         body {
             transition: background-color 0.3s, color 0.3s, font-family 0.3s;
             font-family: "Poppins", sans-serif;
-            background: #f0f0f0;
+            background: #d3d3d3; 
             color: #000000;
         }
         .toggle-wrapper {
@@ -53,10 +53,12 @@
             color: #f5f5f5;
         }
         .icon img {
-            filter: none;
+            border-radius: 50%;
+            background-color: #000; 
+            padding: 5px; 
         }
         .light-mode-icon {
-            filter: invert(100%);
+            filter: none;
         }
     </style>
 </head>
@@ -155,7 +157,7 @@
             } else {
                 body.classList.remove('dark-mode');
                 toggle.classList.remove('active');
-                body.style.backgroundColor = '#f0f0f0';
+                body.style.backgroundColor = '#d3d3d3'; 
                 typedElement.style.color = '#000000';
                 icons.forEach(icon => {
                     icon.classList.add('light-mode-icon');
