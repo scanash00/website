@@ -58,8 +58,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px;
-            background-color: #dcdcdc;
+            padding: 5px;
+            background-color: #b3b3b3;
             border-radius: 50%;
             margin: 10px;
             width: 50px;
@@ -68,11 +68,11 @@
         .icon img {
             transition: all 0.3s;
             border-radius: 0;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
         }
         .light-mode .icon-container {
-            background-color: #dcdcdc;
+            background-color: #b3b3b3;
         }
         @media (max-width: 600px) {
             .toggle-wrapper {
@@ -91,8 +91,8 @@
             }
             .icon-container {
                 margin: 10px;
-                width: 40px;
-                height: 40px;
+                width: 45px;
+                height: 45px;
             }
         }
     </style>
@@ -180,21 +180,25 @@
             const body = document.body;
             const toggle = document.querySelector('.toggle-wrapper');
             const typedElement = document.getElementById('typed');
-            const iconContainer = document.querySelector('.icon-container');
+            const iconContainers = document.querySelectorAll('.icon-container');
 
             if (theme === 'dark') {
                 body.classList.add('dark-mode');
                 body.classList.remove('light-mode');
                 toggle.classList.add('active');
                 typedElement.style.color = '#f5f5f5';
-                iconContainer.style.backgroundColor = 'transparent';
+                iconContainers.forEach(container => {
+                    container.style.backgroundColor = 'transparent';
+                });
             } else {
                 body.classList.remove('dark-mode');
                 body.classList.add('light-mode');
                 toggle.classList.remove('active');
                 body.style.backgroundColor = '#d3d3d3';
                 typedElement.style.color = '#000000';
-                iconContainer.style.backgroundColor = '#dcdcdc';
+                iconContainers.forEach(container => {
+                    container.style.backgroundColor = '#b3b3b3';
+                });
             }
             localStorage.setItem('theme', theme);
         }
