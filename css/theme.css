@@ -18,7 +18,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 1000; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -49,16 +49,17 @@ body {
     color: #333333;
 }
 
-.typed-text {
+#typed {
     transition: color 0.3s;
 }
 
-.dark-mode .typed-text {
-    color: #f5f5f5; /* Light text color for dark mode */
+.dark-mode #typed {
+    color: #f5f5f5; 
+    
 }
 
-.light-mode .typed-text {
-    color: #333333; /* Dark text color for light mode */
+.light-mode #typed {
+    color: #333333; 
 }
 
 .icon-container {
