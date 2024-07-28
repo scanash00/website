@@ -32,7 +32,9 @@
             align-items: center;
             justify-content: space-between;
             padding: 5px;
-            margin: 10px auto;
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
         .toggle-circle {
             position: absolute;
@@ -52,8 +54,16 @@
             background: linear-gradient(135deg, #1a1a1a, #333);
             color: #f5f5f5;
         }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            margin: 20px;
+        }
         .icon img {
-            transition: background-color 0.3s, padding 0.3s, border-radius 0.3s;
+            transition: all 0.3s;
         }
         .light-mode .icon img {
             border-radius: 50%;
@@ -65,7 +75,6 @@
             .toggle-wrapper {
                 width: 50px;
                 height: 25px;
-                margin: 10px 0;
             }
             .toggle-circle {
                 width: 20px;
@@ -76,6 +85,9 @@
             }
             .sun, .moon {
                 font-size: 16px;
+            }
+            .icon-container {
+                margin: 10px;
             }
         }
     </style>
@@ -114,7 +126,7 @@
             <p>Loading Discord status...</p>
         </div>
         
-        <div class="icons">
+        <div class="icon-container">
             <div class="icon discord" data-label="Discord">
                 <a href="https://discord.com/users/827389583342698536/" target="_blank" rel="noopener noreferrer">
                     <img src="logos/discord_white.png" alt="Discord Logo" class="logo-image">
