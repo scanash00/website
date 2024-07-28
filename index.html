@@ -23,7 +23,9 @@
             color: #000000;
         }
         .toggle-wrapper {
-            position: relative;
+            position: absolute;
+            top: 10px;
+            right: 10px;
             width: 60px;
             height: 30px;
             background-color: #444;
@@ -33,7 +35,7 @@
             align-items: center;
             padding: 5px;
             justify-content: space-between;
-            margin: 10px;
+            z-index: 10;
         }
         .toggle-circle {
             position: absolute;
@@ -66,6 +68,8 @@
             .toggle-wrapper {
                 width: 50px;
                 height: 25px;
+                top: 5px;
+                right: 5px;
             }
             .toggle-circle {
                 width: 20px;
@@ -73,6 +77,9 @@
             }
             .toggle-wrapper.active .toggle-circle {
                 transform: translateX(25px);
+            }
+            .sun, .moon {
+                font-size: 16px;
             }
         }
     </style>
